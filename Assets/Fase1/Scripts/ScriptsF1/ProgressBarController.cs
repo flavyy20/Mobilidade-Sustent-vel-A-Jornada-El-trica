@@ -16,11 +16,17 @@ public class ProgressBarController : MonoBehaviour
     private void Awake()
     {
         Instance = this;
-        progressSlider.value = 0;
+
+        if (progressSlider != null)
+        {
+            progressSlider.maxValue = 10; // força ser 10
+            progressSlider.value = 0;
+        }
 
         if (transitionPanel != null)
-            transitionPanel.SetActive(false); // começa invisível
+            transitionPanel.SetActive(false);
     }
+
 
     public void IncrementProgress()
     {

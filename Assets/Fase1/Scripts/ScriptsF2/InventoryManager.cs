@@ -4,6 +4,10 @@ using UnityEngine.UI;
 
 public class InventoryManager : MonoBehaviour
 {
+    [Header("UI da Fase 1")]
+    public GameObject vehicleInfoPanel;   // painel que mostra infos do carro
+    public UIManager uiManager;           // referência direta ao UIManager
+
     [Header("Player e Carro (controle)")]
     public PlayerController playerController;
     public CarController carController;
@@ -14,7 +18,7 @@ public class InventoryManager : MonoBehaviour
     [Header("Painéis e Câmeras")]
     public GameObject inventoryPanel;
     public GameObject panelRecargas;
-    public GameObject openMinimapButton; // botão para abrir o minimapa (começa escondido)
+    public GameObject openMinimapButton;
     public Camera mainCamera;
     public Camera carCamera;
 
@@ -23,14 +27,14 @@ public class InventoryManager : MonoBehaviour
 
     [Header("Configurações")]
     public float transitionDelay = 5f;
-    public float startCheckDelay = 2f; // tempo antes de começar a checar (realtime)
+    public float startCheckDelay = 2f;
 
     private bool transitionTriggered = false;
     private bool canCheckSlots = false;
 
+
     void Awake()
     {
-        // garante que o botão do minimapa comece desligado (independente do estado no Inspector)
         if (openMinimapButton != null)
             openMinimapButton.SetActive(false);
     }
@@ -40,16 +44,11 @@ public class InventoryManager : MonoBehaviour
         if (mainCamera != null) mainCamera.enabled = true;
         if (carCamera != null) carCamera.enabled = false;
 
-        // se o array não foi preenchido no Inspector, tenta descobrir slots automaticamente
         if (slots == null || slots.Length == 0)
-        {
             TryAutoFindSlots();
-        }
 
-        // garante estado limpo
         transitionTriggered = false;
 
-        // limpa todos os slots no início (se houver)
         if (slots != null && slots.Length > 0)
         {
             foreach (DropSlot slot in slots)
@@ -63,17 +62,15 @@ public class InventoryManager : MonoBehaviour
             }
         }
 
-        // zera barra de progresso
         if (progressBar != null)
             progressBar.value = 0f;
 
-        // garante que o botão do minimapa esteja oculto até a fase 2 (redundante, mas seguro)
         if (openMinimapButton != null)
             openMinimapButton.SetActive(false);
 
-        // usa WaitForSecondsRealtime para não travar enquanto o jogo estiver pausado no tutorial
         StartCoroutine(EnableSlotCheckAfterDelayRealtime());
     }
+
 
     IEnumerator EnableSlotCheckAfterDelayRealtime()
     {
@@ -81,10 +78,12 @@ public class InventoryManager : MonoBehaviour
         canCheckSlots = true;
     }
 
+
     void Update()
     {
         if (!canCheckSlots || transitionTriggered) return;
 
+        // Apenas checa slots se inventário ativo
         if (inventoryPanel != null && inventoryPanel.activeInHierarchy)
         {
             if (AllSlotsFilled())
@@ -93,111 +92,140 @@ public class InventoryManager : MonoBehaviour
                 StartCoroutine(TransitionToNextPhase());
             }
         }
+
+        // DESATIVA PLAYER E MENSAGENS AO COMPLETAR A BARRA DE PROGRESSO
+        if (progressBar != null && progressBar.value >= progressBar.maxValue)
+        {
+            CleanPhase1UI_And_DisablePlayer(); // <- nova função limpa e desativa
+        }
     }
 
-    // método chamado pelo DropSlot após um OnDrop (via Invoke) para forçar rechecagem imediata
+
+    // ===========================
+    // LIMPEZA TOTAL DA FASE 1
+    // ===========================
+    private void CleanPhase1UI_And_DisablePlayer()
+    {
+        // 1 — esconde painel de infos
+        if (vehicleInfoPanel != null)
+            vehicleInfoPanel.SetActive(false);
+
+        if (UIManager.Instance != null)
+        {
+            UIManager.Instance.painelInfo.SetActive(false);
+            UIManager.Instance.infoText.text = "";
+            UIManager.Instance.activeVehicle = null;
+        }
+
+        // 2 — Desliga TODAS interações de veículos
+        foreach (var v in FindObjectsOfType<VehicleInteraction>())
+            v.enabled = false;
+
+        // 3 — Desativa COMPLETAMENTE o Player
+        if (playerController != null && playerController.gameObject.activeSelf)
+        {
+            Collider[] cols = playerController.GetComponentsInChildren<Collider>();
+            foreach (var c in cols)
+                c.enabled = false;
+
+            playerController.gameObject.SetActive(false);
+
+            Debug.Log("Player e UI da fase 1 desativados completamente.");
+        }
+    }
+
+
     public void CheckSlotsNow()
     {
         if (!canCheckSlots || transitionTriggered) return;
 
-        if (inventoryPanel != null && inventoryPanel.activeInHierarchy && AllSlotsFilled())
+        if (inventoryPanel.activeInHierarchy && AllSlotsFilled())
         {
             transitionTriggered = true;
             StartCoroutine(TransitionToNextPhase());
         }
     }
 
+
     bool AllSlotsFilled()
     {
-        // se não há slots definidos, retorna false (não transiciona automaticamente)
         if (slots == null || slots.Length == 0)
         {
-            Debug.Log("[InventoryManager] AllSlotsFilled(): nenhum slot configurado ainda.");
+            Debug.Log("[InventoryManager] AllSlotsFilled(): nenhum slot encontrado.");
             return false;
         }
 
         int filled = 0;
-        for (int i = 0; i < slots.Length; i++)
+
+        foreach (var slot in slots)
         {
-            DropSlot slot = slots[i];
-            bool has = (slot != null) && slot.HasItem();
-            // somente debug se necessário (comente se poluir o console)
-            Debug.Log($"{(slot!=null?slot.name:"SlotNull")} -> {(has ? "OCUPADO" : "VAZIO")}");
-            if (has) filled++;
+            if (slot != null && slot.HasItem())
+                filled++;
         }
 
-        Debug.Log($"[DEBUG] Slots ocupados: {filled}/{slots.Length}");
-        return (filled > 0) && (filled == slots.Length); // só true se pelo menos 1 slot existe e todos ocupados
+        return (filled > 0 && filled == slots.Length);
     }
+
 
     IEnumerator TransitionToNextPhase()
     {
-        Debug.Log("Todos os slots preenchidos! Transição em " + transitionDelay + " segundos...");
+        Debug.Log("Slots completos! Preparando transição...");
+
+        // limpa UI e player ANTES de esperar
+        CleanPhase1UI_And_DisablePlayer();
+
         yield return new WaitForSeconds(transitionDelay);
 
-        // Desativa o painel de inventário e painel de recargas
+        // Painéis da fase 1 somem
         if (inventoryPanel != null)
             inventoryPanel.SetActive(false);
 
         if (panelRecargas != null)
             panelRecargas.SetActive(false);
 
-        // Zera a barra de progresso
+        // limpa progresso
         if (progressBar != null)
-            progressBar.value = 0f;
+            progressBar.value = 0;
 
-        // Troca as câmeras
+        // troca câmeras
         if (mainCamera != null) mainCamera.enabled = false;
         if (carCamera != null) carCamera.enabled = true;
 
-        // Alterna controle entre player e carro
-        if (playerController != null)
-        {
-            playerController.enabled = false;
-            Debug.Log("PlayerController desativado.");
-        }
-
+        // ativa controle do carro
         if (carController != null)
         {
-            carController.podeControlar = true;
             carController.enabled = true;
-            Debug.Log("Controle do carro liberado — fase 2 iniciada!");
+            carController.podeControlar = true;
         }
 
-        // Ativa o botão do minimapa quando a fase 2 começar
+        // botão minimapa somente agora
         if (openMinimapButton != null)
-        {
             openMinimapButton.SetActive(true);
-            Debug.Log("Botão do minimapa ativado — disponível para o jogador.");
-        }
+
+        Debug.Log("FASE 2 iniciada com sucesso.");
     }
 
-    // tenta preencher slots automaticamente a partir do inventoryPanel ou de objetos DropSlot na cena
+
     private void TryAutoFindSlots()
     {
-        // prioridade: procurar DropSlot abaixo do inventoryPanel
         if (inventoryPanel != null)
         {
             DropSlot[] found = inventoryPanel.GetComponentsInChildren<DropSlot>(true);
-            if (found != null && found.Length > 0)
+            if (found.Length > 0)
             {
                 slots = found;
-                Debug.Log($"[InventoryManager] Auto-detected {slots.Length} DropSlot(s) under inventoryPanel.");
                 return;
             }
         }
 
-        // fallback: localizar todos os DropSlot na cena
         DropSlot[] all = FindObjectsOfType<DropSlot>();
-        if (all != null && all.Length > 0)
+        if (all.Length > 0)
         {
             slots = all;
-            Debug.Log($"[InventoryManager] Auto-detected {slots.Length} DropSlot(s) in scene (fallback).");
             return;
         }
 
-        // se aqui, não encontrou slots — slots ficará vazio e checagem não ocorrerá
         slots = new DropSlot[0];
-        Debug.LogWarning("[InventoryManager] Não foram encontrados DropSlot(s) automaticamente.");
+        Debug.LogWarning("[InventoryManager] Nenhum DropSlot encontrado.");
     }
 }
