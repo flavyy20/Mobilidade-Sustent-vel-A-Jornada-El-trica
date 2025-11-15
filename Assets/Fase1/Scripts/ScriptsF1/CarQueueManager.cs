@@ -63,13 +63,6 @@ public class CarQueueManager : MonoBehaviour
             carHeights[car] = car.transform.position.y;
     }
 
-    private void Update()
-    {
-        // tecla E ainda funciona pra debug
-        if (Input.GetKeyDown(KeyCode.E))
-            ReleaseFirstCar();
-    }
-
     public void ReleaseFirstCar()
     {
         if (slots[0].currentCar == null || isMoving) return;
