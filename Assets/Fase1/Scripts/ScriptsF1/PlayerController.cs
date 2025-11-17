@@ -3,7 +3,8 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float speed = 5f;
-    public Transform cameraTransform; // arrasta a câmera principal no Inspector
+    public Transform cameraTransform; // arraste a câmera principal no Inspector
+    public float rotationSpeed = 12f; // velocidade da rotação suave
 
     void Update()
     {
@@ -20,8 +21,16 @@ public class PlayerController : MonoBehaviour
         right.Normalize();
 
         // movimento relativo à câmera
-        Vector3 move = (forward * moveZ + right * moveX) * speed * Time.deltaTime;
+        Vector3 moveDir = forward * moveZ + right * moveX;
 
-        transform.Translate(move, Space.World);
+        // Movimento
+        if (moveDir.magnitude > 0.1f)
+        {
+            transform.Translate(moveDir.normalized * speed * Time.deltaTime, Space.World);
+
+            // ROTACIONA PARA A DIREÇÃO DO MOVIMENTO
+            Quaternion targetRotation = Quaternion.LookRotation(moveDir, Vector3.up);
+            transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+        }
     }
 }
