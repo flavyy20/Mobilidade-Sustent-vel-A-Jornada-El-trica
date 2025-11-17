@@ -23,9 +23,9 @@ public class CarQueueManager : MonoBehaviour
     public Transform exitPoint;
 
     [Header("Movimento")]
-    public float moveDuration = 2.5f;
+    public float moveDuration = 4f;
     public float rotateSpeed = 8f;
-    public float arcHeight = 5f;
+    public float arcHeight = 12f;
 
     private Dictionary<GameObject, float> carHeights = new Dictionary<GameObject, float>();
     private bool isMoving = false;
@@ -61,13 +61,6 @@ public class CarQueueManager : MonoBehaviour
     {
         if (!carHeights.ContainsKey(car))
             carHeights[car] = car.transform.position.y;
-    }
-
-    private void Update()
-    {
-        // tecla E ainda funciona pra debug
-        if (Input.GetKeyDown(KeyCode.E))
-            ReleaseFirstCar();
     }
 
     public void ReleaseFirstCar()
