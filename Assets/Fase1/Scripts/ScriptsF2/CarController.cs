@@ -3,41 +3,60 @@ using UnityEngine;
 public class CarController : MonoBehaviour
 {
     [Header("Configurações de movimento")]
-    public float acceleration = 10f;   // quão rápido acelera
-    public float maxSpeed = 15f;       // limite de velocidade
-    public float turnSpeed = 80f;      // velocidade de rotação
+    public float acceleration = 10f;
+    public float maxSpeed = 15f;
+    public float turnSpeed = 80f;
 
     [Header("Controle de ativação")]
-    public bool podeControlar = false; // só verdadeiro após troca de câmera/fase
+    public bool podeControlar = false;
 
-    private float currentSpeed = 0f;   // velocidade atual
+    private float currentSpeed = 0f;
+
+    private Vector2 touchStartPos;
+    private Vector2 touchCurrentPos;
 
     void Update()
     {
-        // Só permite controle se a flag estiver ativa
         if (!podeControlar) return;
 
-        // Entrada do jogador
-        float moveInput = Input.GetAxis("Vertical");   // W/S
-        float turnInput = Input.GetAxis("Horizontal"); // A/D
+        float moveInput = 0;
+        float turnInput = 0;
 
-        // Acelera gradualmente
+        // --- PC
+        moveInput = Input.GetAxis("Vertical");
+        turnInput = Input.GetAxis("Horizontal");
+
+        // --- MOBILE
+        if (Input.touchCount > 0)
+        {
+            Touch touch = Input.GetTouch(0);
+
+            if (touch.phase == TouchPhase.Began)
+                touchStartPos = touch.position;
+
+            if (touch.phase == TouchPhase.Moved || touch.phase == TouchPhase.Stationary)
+            {
+                touchCurrentPos = touch.position;
+                Vector2 delta = (touchCurrentPos - touchStartPos).normalized;
+
+                moveInput = delta.y;
+                turnInput = delta.x;
+            }
+        }
+
+        // aceleração
         currentSpeed += moveInput * acceleration * Time.deltaTime;
         currentSpeed = Mathf.Clamp(currentSpeed, -maxSpeed * 0.5f, maxSpeed);
 
-        // Move o carro para frente (no eixo local)
+        // mover
         transform.Translate(Vector3.forward * currentSpeed * Time.deltaTime);
 
-        // Rotação suave
+        // virar
         if (Mathf.Abs(turnInput) > 0.1f)
-        {
             transform.Rotate(Vector3.up * turnInput * turnSpeed * Time.deltaTime);
-        }
 
-        // Atrito natural
+        // desaceleração natural
         if (moveInput == 0)
-        {
             currentSpeed = Mathf.Lerp(currentSpeed, 0, 2f * Time.deltaTime);
-        }
     }
 }

@@ -1,9 +1,13 @@
 using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.Video;
+using UnityEngine.Events; // << adicionado
 
 public class InventoryManager : MonoBehaviour
 {
+    public VideoClip cutsceneFase2;
+
     [Header("UI da Fase 1")]
     public GameObject vehicleInfoPanel;
     public UIManager uiManager;
@@ -37,21 +41,17 @@ public class InventoryManager : MonoBehaviour
     private bool transitionTriggered = false;
     private bool canCheckSlots = false;
 
-
     void Awake()
     {
-        // Minimapa sempre começa DESATIVADO
         if (openMinimapButton != null)
             openMinimapButton.SetActive(false);
 
-        // Barra da fase 2 começa desativada
         if (timeBarUI != null)
             timeBarUI.SetActive(false);
     }
 
     void Start()
     {
-        // Configura estado inicial das câmeras
         if (mainCamera != null) mainCamera.enabled = true;
         if (carCamera != null) carCamera.enabled = false;
 
@@ -60,7 +60,6 @@ public class InventoryManager : MonoBehaviour
 
         transitionTriggered = false;
 
-        // limpar slots
         if (slots != null)
         {
             foreach (DropSlot slot in slots)
@@ -168,32 +167,46 @@ public class InventoryManager : MonoBehaviour
 
         if (progressBar != null) progressBar.value = 0;
 
-        // Oculta progress bar da fase 1
         if (progressBarObject != null)
             progressBarObject.SetActive(false);
 
-        // Troca câmeras
+        // Tocar cutscene da fase 2 ANTES de ativar a fase 2
+        if (CutscenePlayer.Instance != null)
+        {
+            UnityEvent ev = new UnityEvent();
+            ev.AddListener(OnCutsceneFase2Ended);
+            CutscenePlayer.Instance.PlayCutscene(cutsceneFase2, ev);
+        }
+        else
+        {
+            // Se não houver CutscenePlayer (fallback), chama direto
+            OnCutsceneFase2Ended();
+        }
+
+        Debug.Log("Cutscene fase 2 disparada (aguardando finalizar)...");
+    }
+
+    // chamado QUANDO a cutscene da fase 2 terminar
+    public void OnCutsceneFase2Ended()
+    {
+        // Depois da cutscene: ativa fase 2 (mesma ordem que tinha antes)
         mainCamera.enabled = false;
         carCamera.enabled = true;
 
-        // Carro ativo
         carController.enabled = true;
         carController.podeControlar = true;
 
-        // Minimapa só AQUI, na fase 2
         if (openMinimapButton != null)
             openMinimapButton.SetActive(true);
 
-        // Ativa barra da fase 2
         if (timeBarUI != null)
             timeBarUI.SetActive(true);
 
         if (timeBarController != null)
             timeBarController.StartTimer();
 
-        Debug.Log("FASE 2 iniciada!");
+        Debug.Log("FASE 2 iniciada (após cutscene)!");
     }
-
 
     private void TryAutoFindSlots()
     {
