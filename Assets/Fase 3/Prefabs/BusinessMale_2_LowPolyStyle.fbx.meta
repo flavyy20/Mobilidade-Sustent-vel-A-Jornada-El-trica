@@ -36,8 +36,8 @@ ModelImporter:
       name: parado
       takeName: Take 001
       internalID: 1827226128182048838
-      firstFrame: 0
-      lastFrame: 1
+      firstFrame: 1
+      lastFrame: 10
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -65,7 +65,7 @@ ModelImporter:
       name: andando
       takeName: Take 001
       internalID: 9067093048684652814
-      firstFrame: 23
+      firstFrame: 10
       lastFrame: 110
       wrapMode: 0
       orientationOffsetY: 0
