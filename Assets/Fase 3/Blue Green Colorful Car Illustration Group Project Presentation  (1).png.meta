@@ -1,0 +1,831 @@
+fileFormatVersion: 2
+guid: fd4782389fa74424b9939777b999e01a
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Blue Green Colorful Car Illustration Group Project Presentation  (1)_0
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 987
+        width: 54
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d06a1abae2b77546a46400cf25b8fb6
+      internalID: 895486208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Green Colorful Car Illustration Group Project Presentation  (1)_1
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 1007
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b81a95495cf86d34d81725319852e7f2
+      internalID: 1436978954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Green Colorful Car Illustration Group Project Presentation  (1)_2
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 660
+        width: 348
+        height: 342
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51398c7b04c0d4941b12b1f13da5c261
+      internalID: 170360431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Green Colorful Car Illustration Group Project Presentation  (1)_3
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 999
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c336d2ed464f3a42a45d315409f2474
+      internalID: 1928829256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Green Colorful Car Illustration Group Project Presentation  (1)_4
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 60
+        width: 1140
+        height: 804
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 389cf839b6a471a49b81ab57ae70a91a
+      internalID: -934741941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Green Colorful Car Illustration Group Project Presentation  (1)_5
+      rect:
+        serializedVersion: 2
+        x: 1830
+        y: 763
+        width: 30
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bc9bea238e9c3e4bb7f7b42e2a994d1
+      internalID: -45872105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Green Colorful Car Illustration Group Project Presentation  (1)_6
+      rect:
+        serializedVersion: 2
+        x: 1830
+        y: 744
+        width: 30
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb9bd8262e16a6e41af341f7ad2b2b5c
+      internalID: -925098869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Green Colorful Car Illustration Group Project Presentation  (1)_7
+      rect:
+        serializedVersion: 2
+        x: 1830
+        y: 726
+        width: 30
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e3547c179645dd41a4056cd091a0789
+      internalID: 1205395166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Green Colorful Car Illustration Group Project Presentation  (1)_8
+      rect:
+        serializedVersion: 2
+        x: 1830
+        y: 720
+        width: 30
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05c3d87eac92e8946b81afca7e49d066
+      internalID: 1318235571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Green Colorful Car Illustration Group Project Presentation  (1)_9
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 691
+        width: 30
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7820616c2513896448d3ed6c8d22db2a
+      internalID: -1019786267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Green Colorful Car Illustration Group Project Presentation  (1)_10
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 649
+        width: 30
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7102d41e432285245a6aefa31d40d95e
+      internalID: -1011003281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Green Colorful Car Illustration Group Project Presentation  (1)_11
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 324
+        width: 324
+        height: 306
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a11d04b9dd14a94bb7a139aed091a0f
+      internalID: 1614526437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Green Colorful Car Illustration Group Project Presentation  (1)_12
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 606
+        width: 30
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ed90e3e82867f3488b24207560304a7
+      internalID: -1275530811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Green Colorful Car Illustration Group Project Presentation  (1)_13
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 592
+        width: 30
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d7fd37f84b90dc4e8848e4dec073b9f
+      internalID: -1295074768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Green Colorful Car Illustration Group Project Presentation  (1)_14
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 568
+        width: 30
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9293a33e260ea6e42ae15f473e709c0d
+      internalID: 690653430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Green Colorful Car Illustration Group Project Presentation  (1)_15
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 561
+        width: 30
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08308a45751618a4dbea730549439e38
+      internalID: -1144106422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Green Colorful Car Illustration Group Project Presentation  (1)_16
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 540
+        width: 30
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8d18e2aa216fa54a9078fcdda499d73
+      internalID: 1469816185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Green Colorful Car Illustration Group Project Presentation  (1)_17
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 366
+        width: 30
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b7eb76b2db42d14295f074c9b6a08c9
+      internalID: -1066820027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Green Colorful Car Illustration Group Project Presentation  (1)_18
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 320
+        width: 30
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d624b25e6c955a428e285eadc701279
+      internalID: 1805434780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Green Colorful Car Illustration Group Project Presentation  (1)_19
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 301
+        width: 30
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d17b85001c968fd48b637397ecbc3ea4
+      internalID: 70794542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Green Colorful Car Illustration Group Project Presentation  (1)_20
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 18
+        width: 330
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a81a371e1abf9646be4bdc99a2e24a5
+      internalID: -1341834777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Green Colorful Car Illustration Group Project Presentation  (1)_21
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 289
+        width: 30
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13297c3ddfc94a8458cb61f3b08e5381
+      internalID: 1021283146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Green Colorful Car Illustration Group Project Presentation  (1)_22
+      rect:
+        serializedVersion: 2
+        x: 1830
+        y: 268
+        width: 30
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22559ea62cbd1ed429f20b0c0c438e66
+      internalID: 280923586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Green Colorful Car Illustration Group Project Presentation  (1)_23
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 258
+        width: 30
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd3d0cbc3eeb5d14999fab96999f679e
+      internalID: 786549142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Green Colorful Car Illustration Group Project Presentation  (1)_24
+      rect:
+        serializedVersion: 2
+        x: 1830
+        y: 254
+        width: 30
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15518c9bbcf21d947a8440bbc26e524a
+      internalID: -301084151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Green Colorful Car Illustration Group Project Presentation  (1)_25
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 198
+        width: 30
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91fdeaeb39903354abb7d6e622fe1b28
+      internalID: -413648714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Green Colorful Car Illustration Group Project Presentation  (1)_26
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 141
+        width: 30
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20ecd08a4e3f9814dab895d2c8b60ac0
+      internalID: 1272520643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Green Colorful Car Illustration Group Project Presentation  (1)_27
+      rect:
+        serializedVersion: 2
+        x: 726
+        y: 132
+        width: 24
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b10e2ff1d1440f4ea92e5a182846ac8
+      internalID: 1618774210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Green Colorful Car Illustration Group Project Presentation  (1)_28
+      rect:
+        serializedVersion: 2
+        x: 1550
+        y: 60
+        width: 20
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65c89516f236b0142a0ba39f127b01cb
+      internalID: -1512182606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Green Colorful Car Illustration Group Project Presentation  (1)_29
+      rect:
+        serializedVersion: 2
+        x: 1597
+        y: 60
+        width: 10
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff0df10f228a31247901e252a8a77baf
+      internalID: 2028812552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Green Colorful Car Illustration Group Project Presentation  (1)_30
+      rect:
+        serializedVersion: 2
+        x: 1604
+        y: 60
+        width: 4
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b15d75aebb9164043a65cfb1bf15b380
+      internalID: 535211568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Green Colorful Car Illustration Group Project Presentation  (1)_31
+      rect:
+        serializedVersion: 2
+        x: 1634
+        y: 60
+        width: 8
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eacc868e9d939f24a8ecd7414a55002c
+      internalID: -2078549743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: c65ae0cf907376940b63bd8c3a4fd131
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Blue Green Colorful Car Illustration Group Project Presentation  (1)_0: 895486208
+      Blue Green Colorful Car Illustration Group Project Presentation  (1)_1: 1436978954
+      Blue Green Colorful Car Illustration Group Project Presentation  (1)_10: -1011003281
+      Blue Green Colorful Car Illustration Group Project Presentation  (1)_11: 1614526437
+      Blue Green Colorful Car Illustration Group Project Presentation  (1)_12: -1275530811
+      Blue Green Colorful Car Illustration Group Project Presentation  (1)_13: -1295074768
+      Blue Green Colorful Car Illustration Group Project Presentation  (1)_14: 690653430
+      Blue Green Colorful Car Illustration Group Project Presentation  (1)_15: -1144106422
+      Blue Green Colorful Car Illustration Group Project Presentation  (1)_16: 1469816185
+      Blue Green Colorful Car Illustration Group Project Presentation  (1)_17: -1066820027
+      Blue Green Colorful Car Illustration Group Project Presentation  (1)_18: 1805434780
+      Blue Green Colorful Car Illustration Group Project Presentation  (1)_19: 70794542
+      Blue Green Colorful Car Illustration Group Project Presentation  (1)_2: 170360431
+      Blue Green Colorful Car Illustration Group Project Presentation  (1)_20: -1341834777
+      Blue Green Colorful Car Illustration Group Project Presentation  (1)_21: 1021283146
+      Blue Green Colorful Car Illustration Group Project Presentation  (1)_22: 280923586
+      Blue Green Colorful Car Illustration Group Project Presentation  (1)_23: 786549142
+      Blue Green Colorful Car Illustration Group Project Presentation  (1)_24: -301084151
+      Blue Green Colorful Car Illustration Group Project Presentation  (1)_25: -413648714
+      Blue Green Colorful Car Illustration Group Project Presentation  (1)_26: 1272520643
+      Blue Green Colorful Car Illustration Group Project Presentation  (1)_27: 1618774210
+      Blue Green Colorful Car Illustration Group Project Presentation  (1)_28: -1512182606
+      Blue Green Colorful Car Illustration Group Project Presentation  (1)_29: 2028812552
+      Blue Green Colorful Car Illustration Group Project Presentation  (1)_3: 1928829256
+      Blue Green Colorful Car Illustration Group Project Presentation  (1)_30: 535211568
+      Blue Green Colorful Car Illustration Group Project Presentation  (1)_31: -2078549743
+      Blue Green Colorful Car Illustration Group Project Presentation  (1)_4: -934741941
+      Blue Green Colorful Car Illustration Group Project Presentation  (1)_5: -45872105
+      Blue Green Colorful Car Illustration Group Project Presentation  (1)_6: -925098869
+      Blue Green Colorful Car Illustration Group Project Presentation  (1)_7: 1205395166
+      Blue Green Colorful Car Illustration Group Project Presentation  (1)_8: 1318235571
+      Blue Green Colorful Car Illustration Group Project Presentation  (1)_9: -1019786267
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
