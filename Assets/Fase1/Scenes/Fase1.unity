@@ -807,6 +807,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfb49e1cda441084bbd83ba38e53891c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  referenceResolution: {x: 1280, y: 720}
+  matchWidthOrHeight: 0.5
 --- !u!1001 &9188193
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1791,6 +1793,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2bbc750ef356af44a5c2d43b09e3336, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  waypoints:
+  - {fileID: 897423091}
+  - {fileID: 414642803}
+  - {fileID: 1706596439}
+  - {fileID: 38422719}
+  - {fileID: 2083137928}
+  - {fileID: 551265543}
+  - {fileID: 1205072979}
+  - {fileID: 1548174476}
+  - {fileID: 897423091}
+  minSpeed: 4
+  maxSpeed: 7
+  rotateSpeed: 4
+  stopDistance: 1
+  safeDistance: 6
+  tooCloseDistance: 3
+  carLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  frontBoostMultiplier: 3
+  frontBoostDuration: 2.5
+  rearStopTime: 2
 --- !u!65 &46939750
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3530,6 +3554,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2bbc750ef356af44a5c2d43b09e3336, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  waypoints:
+  - {fileID: 2139085500}
+  - {fileID: 1988182451}
+  - {fileID: 109523303}
+  - {fileID: 40938940}
+  - {fileID: 1009166892}
+  - {fileID: 2139085500}
+  minSpeed: 4
+  maxSpeed: 7
+  rotateSpeed: 4
+  stopDistance: 1
+  safeDistance: 6
+  tooCloseDistance: 3
+  carLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  frontBoostMultiplier: 3
+  frontBoostDuration: 2.5
+  rearStopTime: 2
 --- !u!65 &135279604
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5968,6 +6011,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2bbc750ef356af44a5c2d43b09e3336, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  waypoints:
+  - {fileID: 897423091}
+  - {fileID: 414642803}
+  - {fileID: 1706596439}
+  - {fileID: 38422719}
+  - {fileID: 2083137928}
+  - {fileID: 551265543}
+  - {fileID: 1205072979}
+  - {fileID: 1548174476}
+  - {fileID: 897423091}
+  minSpeed: 4
+  maxSpeed: 7
+  rotateSpeed: 4
+  stopDistance: 1
+  safeDistance: 6
+  tooCloseDistance: 3
+  carLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  frontBoostMultiplier: 3
+  frontBoostDuration: 2.5
+  rearStopTime: 2
 --- !u!65 &237164859
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10096,6 +10161,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a12009d27d40594fb720055c3ea8faf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 5
+  cameraTransform: {fileID: 963194228}
 --- !u!136 &424933400
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -10759,6 +10826,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2bbc750ef356af44a5c2d43b09e3336, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  waypoints:
+  - {fileID: 2139085500}
+  - {fileID: 1988182451}
+  - {fileID: 109523303}
+  - {fileID: 40938940}
+  - {fileID: 1009166892}
+  - {fileID: 2139085500}
+  minSpeed: 4
+  maxSpeed: 7
+  rotateSpeed: 4
+  stopDistance: 1
+  safeDistance: 6
+  tooCloseDistance: 3
+  carLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  frontBoostMultiplier: 3
+  frontBoostDuration: 2.5
+  rearStopTime: 2
 --- !u!65 &454475923
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11352,6 +11438,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80cbc4d98457de745a8708465604dd45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  acceleration: 10
+  maxSpeed: 15
+  turnSpeed: 80
+  podeControlar: 0
 --- !u!54 &482897652
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -11400,6 +11490,11 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.5312207, y: 1.7515103, z: 3.6914406}
   m_Center: {x: -0.00012207031, y: 0.8553627, z: 0.023587704}
+--- !u!4 &482897656 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 862402628078015291, guid: 640b94cf88de4ef459ce14645b2736d9, type: 3}
+  m_PrefabInstance: {fileID: 482897643}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &483647445 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8573362081540914246, guid: 2844c5493ff643d4aad2cbc9563b1f4b, type: 3}
@@ -11454,6 +11549,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2bbc750ef356af44a5c2d43b09e3336, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  waypoints:
+  - {fileID: 2139085500}
+  - {fileID: 1988182451}
+  - {fileID: 109523303}
+  - {fileID: 40938940}
+  - {fileID: 1009166892}
+  - {fileID: 2139085500}
+  minSpeed: 4
+  maxSpeed: 7
+  rotateSpeed: 4
+  stopDistance: 1
+  safeDistance: 6
+  tooCloseDistance: 3
+  carLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  frontBoostMultiplier: 3
+  frontBoostDuration: 2.5
+  rearStopTime: 2
 --- !u!65 &487236914
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14339,6 +14453,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc3d6bdf2dd920745b69696b55293920, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  queueManager: {fileID: 2109812986}
+  player: {fileID: 424933403}
+  interactionRange: 3
+  selectedType: 0
+  selectedRecharge: 0
 --- !u!4 &635106221
 Transform:
   m_ObjectHideFlags: 0
@@ -15647,6 +15766,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 763766ccb06aa3c40b19d9f74baade97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  painelInfo: {fileID: 726368487}
+  infoText: {fileID: 1916878842}
+  cargaLenta: {fileID: 915681915}
+  cargaRapida: {fileID: 1682009746}
+  cargaUltraRapida: {fileID: 759482274}
+  corLentaAtiva: {r: 1, g: 0.6, b: 0, a: 1}
+  corRapidaAtiva: {r: 0, g: 1, b: 0, a: 1}
+  corUltraAtiva: {r: 0, g: 0, b: 1, a: 1}
+  corDesativada: {r: 1, g: 1, b: 1, a: 1}
+  activeVehicle: {fileID: 0}
 --- !u!4 &708543032
 Transform:
   m_ObjectHideFlags: 0
@@ -15674,6 +15803,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5217ca61330c93b4993a0cb31f4a711f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  progressSlider: {fileID: 203721115}
+  transitionPanel: {fileID: 1416678888}
+  delayBeforePanel: 5
 --- !u!1001 &708613230
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18492,6 +18624,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbcb60f8bcd81184c95a2f63f9eb723f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  target: {fileID: 482897656}
+  offset: {x: 0, y: 5, z: -8}
+  followSpeed: 5
+  rotationSpeed: 3
 --- !u!1001 &821776375
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22712,6 +22848,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ed0744a068e1d84eb18dc59e4936324, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pointA: {fileID: 1199830872}
+  pointB: {fileID: 270351625}
+  duration: 5
 --- !u!1001 &967207584
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22839,6 +22978,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2bbc750ef356af44a5c2d43b09e3336, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  waypoints:
+  - {fileID: 2139085500}
+  - {fileID: 1988182451}
+  - {fileID: 109523303}
+  - {fileID: 40938940}
+  - {fileID: 1009166892}
+  - {fileID: 2139085500}
+  minSpeed: 4
+  maxSpeed: 7
+  rotateSpeed: 4
+  stopDistance: 1
+  safeDistance: 6
+  tooCloseDistance: 3
+  carLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  frontBoostMultiplier: 3
+  frontBoostDuration: 2.5
+  rearStopTime: 2
 --- !u!65 &968256253
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24103,6 +24261,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2bbc750ef356af44a5c2d43b09e3336, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  waypoints:
+  - {fileID: 897423091}
+  - {fileID: 414642803}
+  - {fileID: 1706596439}
+  - {fileID: 38422719}
+  - {fileID: 2083137928}
+  - {fileID: 551265543}
+  - {fileID: 1205072979}
+  - {fileID: 1548174476}
+  - {fileID: 897423091}
+  minSpeed: 4
+  maxSpeed: 7
+  rotateSpeed: 4
+  stopDistance: 1
+  safeDistance: 6
+  tooCloseDistance: 3
+  carLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  frontBoostMultiplier: 3
+  frontBoostDuration: 2.5
+  rearStopTime: 2
 --- !u!65 &1019611048
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26946,6 +27126,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2bbc750ef356af44a5c2d43b09e3336, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  waypoints:
+  - {fileID: 897423091}
+  - {fileID: 414642803}
+  - {fileID: 1706596439}
+  - {fileID: 38422719}
+  - {fileID: 2083137928}
+  - {fileID: 551265543}
+  - {fileID: 1205072979}
+  - {fileID: 1548174476}
+  - {fileID: 897423091}
+  minSpeed: 4
+  maxSpeed: 7
+  rotateSpeed: 4
+  stopDistance: 1
+  safeDistance: 6
+  tooCloseDistance: 3
+  carLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  frontBoostMultiplier: 3
+  frontBoostDuration: 2.5
+  rearStopTime: 2
 --- !u!65 &1135488776
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27432,6 +27634,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2bbc750ef356af44a5c2d43b09e3336, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  waypoints:
+  - {fileID: 2139085500}
+  - {fileID: 1988182451}
+  - {fileID: 109523303}
+  - {fileID: 40938940}
+  - {fileID: 1009166892}
+  - {fileID: 2139085500}
+  minSpeed: 4
+  maxSpeed: 7
+  rotateSpeed: 4
+  stopDistance: 1
+  safeDistance: 6
+  tooCloseDistance: 3
+  carLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  frontBoostMultiplier: 3
+  frontBoostDuration: 2.5
+  rearStopTime: 2
 --- !u!65 &1145472533
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -32441,6 +32662,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2bbc750ef356af44a5c2d43b09e3336, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  waypoints:
+  - {fileID: 897423091}
+  - {fileID: 414642803}
+  - {fileID: 1706596439}
+  - {fileID: 38422719}
+  - {fileID: 2083137928}
+  - {fileID: 551265543}
+  - {fileID: 1205072979}
+  - {fileID: 1548174476}
+  - {fileID: 897423091}
+  minSpeed: 4
+  maxSpeed: 7
+  rotateSpeed: 4
+  stopDistance: 1
+  safeDistance: 6
+  tooCloseDistance: 3
+  carLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  frontBoostMultiplier: 3
+  frontBoostDuration: 2.5
+  rearStopTime: 2
 --- !u!65 &1419002935
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -36038,6 +36281,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 645cab41f40d5ff4b9f4884de30000bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  minimapPanel: {fileID: 137855318}
+  openButton: {fileID: 1596339207}
+  closeButton: {fileID: 927241542}
 --- !u!4 &1580881558
 Transform:
   m_ObjectHideFlags: 0
@@ -42807,6 +43053,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b26c62366b3d36a4f97ffa9be168d5fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vehicleInfoPanel: {fileID: 1800071923}
+  uiManager: {fileID: 708543031}
+  playerController: {fileID: 424933399}
+  carController: {fileID: 482897648}
+  slots: []
+  inventoryPanel: {fileID: 1416678888}
+  panelRecargas: {fileID: 1800071923}
+  openMinimapButton: {fileID: 1596339207}
+  mainCamera: {fileID: 963194227}
+  carCamera: {fileID: 821244393}
+  progressBar: {fileID: 203721115}
+  transitionDelay: 5
+  startCheckDelay: 2
 --- !u!4 &1839054766
 Transform:
   m_ObjectHideFlags: 0
@@ -44268,6 +44527,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9831c517f1c46d84fab9c66154d16e88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  menuPainel: {fileID: 1893876248}
+  creditosPainel: {fileID: 1116105590}
+  tutorial1Painel: {fileID: 2052849753}
+  tutorial2Painel: {fileID: 1865345167}
+  tutorial3Painel: {fileID: 955034066}
 --- !u!1001 &1895331112
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -47095,6 +47359,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2bbc750ef356af44a5c2d43b09e3336, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  waypoints:
+  - {fileID: 897423091}
+  - {fileID: 414642803}
+  - {fileID: 1706596439}
+  - {fileID: 38422719}
+  - {fileID: 2083137928}
+  - {fileID: 551265543}
+  - {fileID: 1205072979}
+  - {fileID: 1548174476}
+  - {fileID: 897423091}
+  minSpeed: 4
+  maxSpeed: 7
+  rotateSpeed: 4
+  stopDistance: 1
+  safeDistance: 6
+  tooCloseDistance: 3
+  carLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  frontBoostMultiplier: 3
+  frontBoostDuration: 2.5
+  rearStopTime: 2
 --- !u!65 &2019668256
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -47742,6 +48028,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2bbc750ef356af44a5c2d43b09e3336, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  waypoints:
+  - {fileID: 897423091}
+  - {fileID: 414642803}
+  - {fileID: 1706596439}
+  - {fileID: 38422719}
+  - {fileID: 2083137928}
+  - {fileID: 551265543}
+  - {fileID: 1205072979}
+  - {fileID: 1548174476}
+  - {fileID: 897423091}
+  minSpeed: 4
+  maxSpeed: 7
+  rotateSpeed: 4
+  stopDistance: 1
+  safeDistance: 6
+  tooCloseDistance: 3
+  carLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  frontBoostMultiplier: 3
+  frontBoostDuration: 2.5
+  rearStopTime: 2
 --- !u!54 &2039291118
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -49678,6 +49986,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e115601fbc0c7df4d85223487f10f538, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  slots:
+  - slotPoint: {fileID: 1796416784}
+    currentCar: {fileID: 0}
+  - slotPoint: {fileID: 1488291006}
+    currentCar: {fileID: 0}
+  - slotPoint: {fileID: 673626455}
+    currentCar: {fileID: 0}
+  prefabCarA: {fileID: 2500286236391313290, guid: 513f61e2d08a37948ac1dbe23f9ce40e, type: 3}
+  prefabCarB: {fileID: 1215363436044276467, guid: 1ed531df9c9796340878fcef97852b4a, type: 3}
+  prefabCarC: {fileID: 865045447074702680, guid: 28e50c4a9bfffa74793bb2b629500234, type: 3}
+  exitPoint: {fileID: 1476909195}
+  moveDuration: 4
+  rotateSpeed: 8
+  arcHeight: 12
 --- !u!4 &2109812987
 Transform:
   m_ObjectHideFlags: 0
