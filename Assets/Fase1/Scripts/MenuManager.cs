@@ -169,7 +169,7 @@ public class MenuManager : MonoBehaviour
             if (inv.mainCamera != null)
                 inv.mainCamera.enabled = true;
 
-            //  Reativar o PLAYER ROBÔ da fase 1
+            // Reativar o PLAYER ROBÔ da fase 1
             if (inv.playerController != null)
             {
                 inv.playerController.gameObject.SetActive(true);
@@ -179,9 +179,32 @@ public class MenuManager : MonoBehaviour
                     c.enabled = true;
             }
 
-            //  Reativar o PanelRecargas da fase 1
+            // Reativar o PanelRecargas da fase 1
             if (inv.panelRecargas != null)
                 inv.panelRecargas.SetActive(true);
+
+            // ===== NOVO: RESETAR ITENS DO MINIGAME =====
+            // 1) Para cada DropSlot: se tiver item dentro, mande-o para a origem
+            DropSlot[] allSlots = FindObjectsOfType<DropSlot>();
+            foreach (var s in allSlots)
+            {
+                // se houver um DraggableItem como filho -> resetar
+                DraggableItem childItem = s.GetComponentInChildren<DraggableItem>();
+                if (childItem != null)
+                {
+                    childItem.ResetToOrigin();
+                }
+
+                // limpa a marcação interna do slot (sem destruir nada)
+                s.ClearSlot();
+            }
+
+            // 2) Garante que TODOS os DraggableItems no projeto voltem para o lugar inicial
+            DraggableItem[] allItems = FindObjectsOfType<DraggableItem>();
+            foreach (var it in allItems)
+            {
+                it.ResetToOrigin();
+            }
         }
 
         // Resetar interface da fase 1 (botões + panelInfo)
@@ -192,4 +215,5 @@ public class MenuManager : MonoBehaviour
 
         Debug.Log("Jogo completamente resetado para o MENU.");
     }
+
 }

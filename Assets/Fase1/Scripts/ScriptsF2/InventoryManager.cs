@@ -68,7 +68,7 @@ public class InventoryManager : MonoBehaviour
                 {
                     slot.ClearSlot();
                     foreach (Transform child in slot.transform)
-                        Destroy(child.gameObject);
+                        Destroy(child.gameObject); // start = limpa qualquer coisa que venha herdada na cena no começo
                 }
             }
         }
@@ -208,6 +208,33 @@ public class InventoryManager : MonoBehaviour
         Debug.Log("FASE 2 iniciada (após cutscene)!");
     }
 
+    // -----------------------------------------------------------
+    // Reset do minigame: devolve TODOS os DraggableItems à origem
+    // e limpa os slots para permitir novo jogo
+    // -----------------------------------------------------------
+    public void ResetMinigame()
+    {
+        Debug.Log("Resetando minigame para novo jogo...");
+
+        // 1) Recupera todos os itens (inclui inativos)
+        DraggableItem[] allItems = FindObjectsOfType<DraggableItem>(true);
+        foreach (var item in allItems)
+        {
+            if (item == null) continue;
+            item.ResetToOrigin();
+        }
+
+        // 2) Limpa a marcação interna de todos os slots (agora que os itens foram reparentados)
+        DropSlot[] allSlots = FindObjectsOfType<DropSlot>(true);
+        foreach (var s in allSlots)
+        {
+            if (s == null) continue;
+            s.ClearSlot();
+        }
+
+        Debug.Log("Minigame resetado com sucesso!");
+    }
+
     private void TryAutoFindSlots()
     {
         if (inventoryPanel != null)
@@ -219,5 +246,28 @@ public class InventoryManager : MonoBehaviour
                 return;
             }
         }
+    }
+
+    // mantive seu método existente (compatibilidade)
+    public void ResetarItensDoMiniGame()
+    {
+        Debug.Log("Resetando itens do minigame...");
+
+        // 1. Retorna todos os DraggableItems para suas posições originais (inclui inativos)
+        DraggableItem[] items = FindObjectsOfType<DraggableItem>(true);
+        foreach (var item in items)
+        {
+            if (item == null) continue;
+            item.ResetToOrigin();
+        }
+
+        // 2. Limpa os slots (marcação interna)
+        foreach (var slot in slots)
+        {
+            if (slot == null) continue;
+            slot.ClearSlot();
+        }
+
+        Debug.Log("ResetarItensDoMiniGame concluído.");
     }
 }
