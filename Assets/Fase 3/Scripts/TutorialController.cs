@@ -32,7 +32,7 @@ public class TutorialController : MonoBehaviour
 
         // Só ativa automático se for painel inicial
         if (gameObject.name == "PanelInicial")
-            Invoke(nameof(AbrirTutorial), 6f);
+            Invoke(nameof(AbrirTutorial), 4f);
     }
 
     public void AbrirTutorial()
